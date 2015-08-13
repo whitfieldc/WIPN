@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         console.log('hello')
     };
 
-
-
     // var latlng = new google.maps.LatLng(-34.397, 150.644);
 
     var mapOptions = {
@@ -20,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     getLocation().then(function(response){
         centerMap(response, map);
+    }).catch(function(response){
+        var latlng = new google.maps.LatLng(-34.397, 150.644);
+        centerMap(latlng, map)
     });
 });
 
@@ -35,6 +36,7 @@ var getLocation = function(){
 };
 
 var centerMap = function(center, map){
+    var latlng = new google.maps.LatLng(-34.397, 150.644);
     map.setCenter(center);
     map.setZoom(15);
 }
