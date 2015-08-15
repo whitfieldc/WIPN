@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var latlng = new google.maps.LatLng(-34.397, 150.644);
         centerMap(latlng, map)
     });
+    bindPost();
 });
 
 var getLocation = function(){
@@ -39,4 +40,22 @@ var centerMap = function(center, map){
     var latlng = new google.maps.LatLng(-34.397, 150.644);
     map.setCenter(center);
     map.setZoom(15);
-}
+};
+
+var bindPost = function(){
+    var postButton = document.getElementById('post-seat');
+    postButton.onclick = function(){
+        // document.getElementById('input-popup').style.display="inline";
+        toggleInput();
+    };
+};
+
+var toggleInput = function(){
+    var inputBox = document.getElementById('input-popup');
+    var display = inputBox.style.display;
+    if (inputBox.style.display === "none"){
+        inputBox.style.display="inline";
+    } else {
+        inputBox.style.display === "none"
+    };
+};
