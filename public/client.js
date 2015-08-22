@@ -2,10 +2,6 @@ var when = require('when');
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    if (when){
-        console.log('hello')
-    };
-
     // var latlng = new google.maps.LatLng(-34.397, 150.644);
 
     var mapOptions = {
@@ -23,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         centerMap(latlng, map)
     });
     bindPost();
+    bindSeatSubmit();
 });
 
 var getLocation = function(){
@@ -52,10 +49,25 @@ var bindPost = function(){
 
 var toggleInput = function(){
     var inputBox = document.getElementById('input-popup');
-    var display = inputBox.style.display;
     if (inputBox.style.display === "none"){
         inputBox.style.display="inline";
     } else {
-        inputBox.style.display === "none"
+        inputBox.style.display = "none"
     };
+};
+
+var logLocation = function(){
+    getLocation().then(function(response){
+        console.log(response)
+    })
+}
+
+var bindSeatSubmit = function(){
+    var submitButton = document.getElementById('seatSubmit');
+    submitButton.onclick = function(event){
+        event.preventDefault();
+        var note = document.getElementById('seatNote').value;
+        console.log(note);
+        document.getElementById('seatNote').value = "";
+    }
 };
