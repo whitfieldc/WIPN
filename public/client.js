@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // var latlng = new google.maps.LatLng(-34.397, 150.644);
 
     var mapOptions = {
-                zoom: 13,
+                zoom: 19,
                 // center: latlng,
                 disableDefaultUI: true
                   };
@@ -36,7 +36,7 @@ var getLocation = function(){
 var centerMap = function(center, map){
     var latlng = new google.maps.LatLng(-34.397, 150.644);
     map.setCenter(center);
-    map.setZoom(15);
+    map.setZoom(19);
 };
 
 var bindPost = function(){
@@ -56,10 +56,11 @@ var toggleInput = function(){
     };
 };
 
-var logLocation = function(){
-    getLocation().then(function(response){
-        console.log(response)
-    })
+var recordSeat = function(seatNote){
+    getLocation()
+    .then(buildNoteObj)
+    .then(function(response){console.log('later response' + response)})
+    console.log('when will this happen?')
 }
 
 var bindSeatSubmit = function(){
@@ -67,7 +68,12 @@ var bindSeatSubmit = function(){
     submitButton.onclick = function(event){
         event.preventDefault();
         var note = document.getElementById('seatNote').value;
-        console.log(note);
+        // console.log(note);
         document.getElementById('seatNote').value = "";
+        recordSeat(note);
     }
 };
+
+var buildNoteObj = function(response){
+    return response
+}
