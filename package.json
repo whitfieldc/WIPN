@@ -1,0 +1,25 @@
+{
+  "name": "wipn",
+  "version": "1.0.0",
+  "description": "w.i.p.n.?",
+  "main": "main.js",
+  "dependencies": {
+    "when": "^3.7.3",
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitfieldc/WIPN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whitfieldc/WIPN/issues"
+  },
+  "homepage": "https://github.com/whitfieldc/WIPN#readme"
+}
