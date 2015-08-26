@@ -2328,7 +2328,7 @@ var when = require('when');
 document.addEventListener("DOMContentLoaded", function(event) {
 
     // var latlng = new google.maps.LatLng(-34.397, 150.644);
-
+    // var socket = io();
     var mapOptions = {
                 zoom: 19,
                 // center: latlng,
@@ -2345,6 +2345,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     bindPost();
     bindSeatSubmit();
+    socket.on('seat post', function(seatObj){
+        createSeatMarker(seatObj, map);
+    })
 });
 
 var getLocation = function(){
@@ -2383,10 +2386,15 @@ var toggleInput = function(){
 
 var recordSeat = function(seatNote){
     getLocation()
-    .then(buildNoteObj)
-    .then(function(response){console.log('later response' + response)})
-    console.log('when will this happen?')
-}
+    .then(function(response){
+        seatObj = {
+            note: seatNote,
+            lat: response.G,
+            lon: response.K
+        };
+        socket.emit('seat post', seatObj);
+    });
+};
 
 var bindSeatSubmit = function(){
     var submitButton = document.getElementById('seatSubmit');
@@ -2395,13 +2403,23 @@ var bindSeatSubmit = function(){
         var note = document.getElementById('seatNote').value;
         // console.log(note);
         document.getElementById('seatNote').value = "";
+        toggleInput()
         recordSeat(note);
-    }
+    };
 };
 
-var buildNoteObj = function(response){
-    console.log(seatNote);
-    return response
+var createSeatMarker = function(seatObj, targetMap){
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(seatObj.lat,seatObj.lon),
+        map: targetMap,
+        animation: google.maps.Animation.DROP,
+    });
+    var info = new google.maps.InfoWindow({
+        content: '<h3>' + seatObj.note + '</h3>'
+    });
+    marker.addListener('click', function(){
+        info.open(targetMap, marker);
+    });
 }
 
 },{"when":18}],20:[function(require,module,exports){

@@ -14,9 +14,14 @@ app.get('/seats', function(req, res){
 
 io.on('connection', function(socket){
     console.log('connection established');
+
     socket.on('disconnect', function(){
         console.log('connection wiped');
     });
+
+    socket.on('seat post', function(seatObj){
+      io.emit('seat post', seatObj)
+    })
 });
 
 http.listen(3000, function(){
