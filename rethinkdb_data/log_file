@@ -1,0 +1,30 @@
+2015-08-26T19:42:22.143703000 0.468671s notice: Recursively removing directory /Users/cwhitfield/Desktop/WIPN/rethinkdb_data/tmp
+2015-08-26T19:42:22.145762000 0.470736s notice: Initializing directory /Users/cwhitfield/Desktop/WIPN/rethinkdb_data
+2015-08-26T19:42:22.145955000 0.470924s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/cwhitfield/Desktop/WIPN/rethinkdb_data' did not already exist or is empty.)
+2015-08-26T19:42:22.146103000 0.471071s notice: Running rethinkdb 2.1.1 (CLANG 6.1.0 (clang-602.0.53))...
+2015-08-26T19:42:22.159124000 0.484093s notice: Running on Darwin 14.5.0 x86_64
+2015-08-26T19:42:22.159193000 0.484160s notice: Loading data from directory /Users/cwhitfield/Desktop/WIPN/rethinkdb_data
+2015-08-26T19:42:22.311818000 0.636785s info: Automatically using cache size of 297 MB
+2015-08-26T19:42:22.312263000 0.637230s notice: Listening for intracluster connections on port 29015
+2015-08-26T19:42:22.313671000 0.638638s notice: Listening for client driver connections on port 28015
+2015-08-26T19:42:22.313795000 0.638762s notice: Listening for administrative HTTP connections on port 8080
+2015-08-26T19:42:22.313801000 0.638767s notice: Listening on addresses: 127.0.0.1, ::1
+2015-08-26T19:42:22.313801001 0.638768s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-08-26T19:42:22.313804000 0.638770s notice: Server ready, "DB_MB147_ocm" 36ee46cb-af49-42b7-90d3-372cd5a8f477
+2015-08-26T19:42:22.737289000 1.062256s notice: A newer version of the RethinkDB server is available: 2.1.2. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-26T19:46:50.085100000 268.407566s notice: Server got SIGINT from pid 1154, uid 1957098541; shutting down...
+2015-08-26T19:46:50.085252000 268.407718s notice: Shutting down client connections...
+2015-08-26T19:46:50.085399000 268.407866s notice: All client connections closed.
+2015-08-26T19:46:50.085409000 268.407875s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-26T19:46:50.086068000 268.408535s notice: Storage engine shut down.
+2015-08-26T19:46:52.175231000 0.610297s notice: Running rethinkdb 2.1.1 (CLANG 6.1.0 (clang-602.0.53))...
+2015-08-26T19:46:52.187817000 0.622879s notice: Running on Darwin 14.5.0 x86_64
+2015-08-26T19:46:52.187889000 0.622947s notice: Loading data from directory /Users/cwhitfield/Desktop/WIPN/rethinkdb_data
+2015-08-26T19:46:52.234639000 0.669697s info: Automatically using cache size of 259 MB
+2015-08-26T19:46:52.235233000 0.670291s notice: Listening for intracluster connections on port 29015
+2015-08-26T19:46:52.236510000 0.671569s notice: Listening for client driver connections on port 28015
+2015-08-26T19:46:52.236664000 0.671722s notice: Listening for administrative HTTP connections on port 8080
+2015-08-26T19:46:52.236671000 0.671729s notice: Listening on addresses: 127.0.0.1, ::1
+2015-08-26T19:46:52.236672000 0.671730s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-08-26T19:46:52.236675000 0.671733s notice: Server ready, "DB_MB147_ocm" 36ee46cb-af49-42b7-90d3-372cd5a8f477
+2015-08-26T19:46:52.407503000 0.842562s notice: A newer version of the RethinkDB server is available: 2.1.2. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
