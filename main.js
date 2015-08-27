@@ -2,6 +2,11 @@ var express = require('express')
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+
+var config = require('./config.js');
+
+var r = require('rethinkdb');
+
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
