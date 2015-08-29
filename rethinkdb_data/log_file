@@ -28,3 +28,53 @@
 2015-08-26T19:46:52.236672000 0.671730s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
 2015-08-26T19:46:52.236675000 0.671733s notice: Server ready, "DB_MB147_ocm" 36ee46cb-af49-42b7-90d3-372cd5a8f477
 2015-08-26T19:46:52.407503000 0.842562s notice: A newer version of the RethinkDB server is available: 2.1.2. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-27T09:59:37.315838000 6730.597644s notice: Server got SIGINT from pid 1154, uid 1957098541; shutting down...
+2015-08-27T09:59:37.316077000 6730.597880s notice: Shutting down client connections...
+2015-08-27T09:59:37.319684000 6730.601487s notice: All client connections closed.
+2015-08-27T09:59:37.319697000 6730.601500s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-08-27T09:59:37.325437000 6730.607240s notice: Storage engine shut down.
+2015-08-28T19:59:11.289305000 0.360861s notice: Running rethinkdb 2.1.1 (CLANG 6.1.0 (clang-602.0.53))...
+2015-08-28T19:59:11.365464000 0.437014s notice: Running on Darwin 14.5.0 x86_64
+2015-08-28T19:59:11.365532000 0.437080s notice: Loading data from directory /Users/cwhitfield/Desktop/WIPN/rethinkdb_data
+2015-08-28T19:59:11.450133000 0.521664s info: Automatically using cache size of 658 MB
+2015-08-28T19:59:11.453744000 0.525276s notice: Listening for intracluster connections on port 29015
+2015-08-28T19:59:11.473460000 0.544991s notice: Listening for client driver connections on port 28015
+2015-08-28T19:59:11.473994000 0.545526s notice: Listening for administrative HTTP connections on port 8080
+2015-08-28T19:59:11.474010000 0.545541s notice: Listening on addresses: 127.0.0.1, ::1
+2015-08-28T19:59:11.474012000 0.545543s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-08-28T19:59:11.474019000 0.545549s notice: Server ready, "DB_MB147_ocm" 36ee46cb-af49-42b7-90d3-372cd5a8f477
+2015-08-28T19:59:12.139149000 1.210680s notice: A newer version of the RethinkDB server is available: 2.1.2. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-08-28T20:41:18.748176000 2445.961697s info: Table bb0ae5a6-5de9-4675-a6f3-b646508c20cc: Added replica on this server.
+2015-08-28T20:41:19.882664000 2447.096169s info: Table bb0ae5a6-5de9-4675-a6f3-b646508c20cc: Starting a new Raft election for term 1.
+2015-08-28T20:41:19.908380000 2447.121883s info: Table bb0ae5a6-5de9-4675-a6f3-b646508c20cc: This server is Raft leader for term 1. Latest log index is 0.
+2015-08-28T20:41:20.915058000 2448.128545s info: Table bb0ae5a6-5de9-4675-a6f3-b646508c20cc: Configuration is changing.
+2015-08-28T20:46:32.448078000 2759.658350s notice: Removing file /Users/cwhitfield/Desktop/WIPN/rethinkdb_data/bb0ae5a6-5de9-4675-a6f3-b646508c20cc
+2015-08-28T20:46:32.482119000 2759.692391s info: Table bb0ae5a6-5de9-4675-a6f3-b646508c20cc: Deleted the table.
+2015-08-28T20:46:41.347479000 2768.557665s info: Table 3472585c-fc32-4be0-9ea5-3ed5001af9f4: Added replica on this server.
+2015-08-28T20:46:43.083457000 2770.293626s info: Table 3472585c-fc32-4be0-9ea5-3ed5001af9f4: Starting a new Raft election for term 1.
+2015-08-28T20:46:43.108678000 2770.318847s info: Table 3472585c-fc32-4be0-9ea5-3ed5001af9f4: This server is Raft leader for term 1. Latest log index is 0.
+2015-08-28T20:46:44.645173000 2771.855325s info: Table 3472585c-fc32-4be0-9ea5-3ed5001af9f4: Configuration is changing.
+2015-08-28T20:51:10.908639000 3038.116035s notice: Removing file /Users/cwhitfield/Desktop/WIPN/rethinkdb_data/3472585c-fc32-4be0-9ea5-3ed5001af9f4
+2015-08-28T20:51:10.943438000 3038.150834s info: Table 3472585c-fc32-4be0-9ea5-3ed5001af9f4: Deleted the table.
+2015-08-28T20:51:26.713234000 3053.920460s info: Table 76cbbbae-d9fa-4099-91c3-19b5e3610a56: Added replica on this server.
+2015-08-28T20:51:27.919996000 3055.127222s info: Table 76cbbbae-d9fa-4099-91c3-19b5e3610a56: Starting a new Raft election for term 1.
+2015-08-28T20:51:27.948218000 3055.155427s info: Table 76cbbbae-d9fa-4099-91c3-19b5e3610a56: This server is Raft leader for term 1. Latest log index is 0.
+2015-08-28T20:51:28.874555000 3056.081764s info: Table 76cbbbae-d9fa-4099-91c3-19b5e3610a56: Configuration is changing.
+2015-08-28T20:54:14.659399000 3221.864889s notice: Removing file /Users/cwhitfield/Desktop/WIPN/rethinkdb_data/76cbbbae-d9fa-4099-91c3-19b5e3610a56
+2015-08-28T20:54:14.690414000 3221.895904s info: Table 76cbbbae-d9fa-4099-91c3-19b5e3610a56: Deleted the table.
+2015-08-28T20:54:28.264479000 3235.469833s info: Table 96e3dd74-3230-48b2-84aa-8a014c864086: Added replica on this server.
+2015-08-28T20:54:29.355541000 3236.560879s info: Table 96e3dd74-3230-48b2-84aa-8a014c864086: Starting a new Raft election for term 1.
+2015-08-28T20:54:29.388617000 3236.593954s info: Table 96e3dd74-3230-48b2-84aa-8a014c864086: This server is Raft leader for term 1. Latest log index is 0.
+2015-08-28T20:54:30.417481000 3237.622818s info: Table 96e3dd74-3230-48b2-84aa-8a014c864086: Configuration is changing.
+2015-08-28T21:04:27.346532000 3834.545692s notice: Removing file /Users/cwhitfield/Desktop/WIPN/rethinkdb_data/96e3dd74-3230-48b2-84aa-8a014c864086
+2015-08-28T21:04:27.384273000 3834.583433s info: Table 96e3dd74-3230-48b2-84aa-8a014c864086: Deleted the table.
+2015-08-28T21:05:30.706217000 3897.904731s info: Table 6171bd85-b171-46da-b8a5-25c58c9ce0f7: Added replica on this server.
+2015-08-28T21:05:31.985181000 3899.183678s info: Table 6171bd85-b171-46da-b8a5-25c58c9ce0f7: Starting a new Raft election for term 1.
+2015-08-28T21:05:32.016278000 3899.214775s info: Table 6171bd85-b171-46da-b8a5-25c58c9ce0f7: This server is Raft leader for term 1. Latest log index is 0.
+2015-08-28T21:05:32.856806000 3900.055304s info: Table 6171bd85-b171-46da-b8a5-25c58c9ce0f7: Configuration is changing.
+2015-08-28T22:44:02.162071000 6984.492362s notice: Removing file /Users/cwhitfield/Desktop/WIPN/rethinkdb_data/6171bd85-b171-46da-b8a5-25c58c9ce0f7
+2015-08-28T22:44:02.191032000 6984.521323s info: Table 6171bd85-b171-46da-b8a5-25c58c9ce0f7: Deleted the table.
+2015-08-28T22:45:38.753547000 7081.082834s info: Table 59cf83c6-3a3c-4139-b184-511d3aad66b5: Added replica on this server.
+2015-08-28T22:45:40.216482000 7082.545752s info: Table 59cf83c6-3a3c-4139-b184-511d3aad66b5: Starting a new Raft election for term 1.
+2015-08-28T22:45:40.242586000 7082.571856s info: Table 59cf83c6-3a3c-4139-b184-511d3aad66b5: This server is Raft leader for term 1. Latest log index is 0.
+2015-08-28T22:45:40.920096000 7083.249366s info: Table 59cf83c6-3a3c-4139-b184-511d3aad66b5: Configuration is changing.

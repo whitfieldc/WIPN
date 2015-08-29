@@ -62,17 +62,19 @@ r.connect(config.rethinkdb, function(err, conn){
     }
 
     r.table('seats').indexWait('createdAt').run(conn).then(function(err, result){
-        console.log("Table & index are available...");
+        console.log("Table & index are available... (65)");
         startApp();
     }).error(function(err){
         r.dbCreate(config.rethinkdb.db).run(conn).finally(function(){
-            r.table('seats').indexCreate('createdAt').run(conn);
+            return r.tableCreate('seats').run(conn);
         }).finally(function(){
-            r.table('seats').indexCreate('createdAt').run(conn);
+            // console.log('creating index')
+            return r.table('seats').indexCreate('createdAt').run(conn);
         }).finally(function(result){
-            r.table('seats').indexWait('createdAt').run(conn);
+            return r.table('seats').indexWait('createdAt').run(conn);
         }).then(function(result){
-            console.log("Table & index are available...");
+            console.log(result)
+            console.log("Table & index are available...(75)");
             startApp();
             conn.close();
         }).error(function(err){
@@ -81,12 +83,16 @@ r.connect(config.rethinkdb, function(err, conn){
                 console.log(err);
                 process.exit(1);
             }
-            console.log("Table & index are available...");
+            console.log("Table & index are available...(84)");
             startApp();
             conn.close();
         });
     });
 });
+
+
+
+
 
 
 
