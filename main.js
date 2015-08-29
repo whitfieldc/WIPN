@@ -16,6 +16,12 @@ var startApp = function(){
     });
 }
 
+function handleError(res) {
+    return function(error) {
+        res.send(500, {error: error.message});
+    }
+}
+
 var createConnection = function(req, res, next){
     r.connect(config.rethinkdb).then(function(conn){
         req._rdbConn = conn;
@@ -39,17 +45,6 @@ app.get('/seats', function(req, res){
     res.json({"hello":"goodbye"});
 });
 
-io.on('connection', function(socket){
-    console.log('connection established');
-
-    socket.on('disconnect', function(){
-        console.log('connection wiped');
-    });
-
-    socket.on('seat post', function(seatObj){
-      io.emit('seat post', seatObj)
-    })
-});
 
 app.use(closeConnection);
 
@@ -90,6 +85,28 @@ r.connect(config.rethinkdb, function(err, conn){
     });
 });
 
+
+io.on('connection', function(socket){
+    console.log('connection established');
+
+    socket.on('disconnect', function(){
+        console.log('connection wiped');
+    });
+
+    // r.connect(config.get('rethinkdb'))
+    //     .then(function(conn){
+
+    //     })
+
+    socket.on('seat post', function(seatObj){
+      // io.emit('seat post', seatObj)
+      r.table('seats').insert({
+        note: seatObj.note,
+        lat: seatObj.lat,
+        lon: seatObj.lon
+      }).run(r.conn);
+    })
+});
 
 
 
