@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     bindPost();
     bindSeatSubmit();
-    socket.on('seat post', function(seatObj){
+    socket.on('seat', function(seatObj){
         createSeatMarker(seatObj, map);
     })
 });
@@ -67,7 +67,7 @@ var recordSeat = function(seatNote){
             lat: response.G,
             lon: response.K
         };
-        socket.emit('seat post', seatObj);
+        socket.emit('seat', seatObj);
     });
 };
 
