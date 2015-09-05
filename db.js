@@ -1,5 +1,5 @@
 var config = require('./config.js');
-var q = require('q')
+// var q = require('q')
 
 var r = require('rethinkdb');
 require('rethinkdb-init')(r);
