@@ -4,11 +4,26 @@
         <title>WIPN</title>
         <style>
             #map-canvas {
-                width: 500px;
-                height: 500px;
+                position : absolute;
+                top : 0%;
+                right : 0px;
+                left : 0px;
+                height: 100%;
+                z-index: -1;
+            }
+            .button-contain {
+                position: absolute;
+                bottom: 0px;
+                height: 3em;
+            }
+
+            .button-contain .input{
+                height: 100%;
             }
             .debug {
                 border: 1px solid red;
+                padding: 0px;
+                margin: 0px;
             }
         </style>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&sensor=false"></script>
@@ -16,12 +31,16 @@
         <script src="bundle.js"></script>
     </head>
     <body>
-        <h2 class="debug">"wipn"</h2>
+        <div class="debug header">
+            <h2 class="debug">"wipn"</h2>
+        </div>
         <div class="debug" id="map-canvas"></div>
-        <button class="debug" id="post-seat">Post A Seat</button>
-        <div class="debug" id="input-popup" style="display:none">
-            <input class="debug" id="seatNote" type="text" placeholder="Enter a note"/>
-            <input class="debug" id="seatSubmit" type="submit" value="Submit"/>
+        <div class="debug button-contain">
+            <button class="debug input" id="post-seat">Post A Seat</button>
+            <div class="debug" id="input-popup" style="display:none">
+                <input class="debug input" id="seatNote" type="text" placeholder="Enter a note"/>
+                <input class="debug input" id="seatSubmit" type="submit" value="Submit"/>
+            </div>
         </div>
         <script>
             var socket = io();
