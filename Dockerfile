@@ -1,14 +1,14 @@
 FROM node:latest
 MAINTAINER Charles Whitfield <whitfield.cw@gmail.com>
 
-WORKDIR /app
-ADD ./package.json /app/package.json
+WORKDIR /wipn
+ADD ./package.json /wipn/package.json
 RUN npm install
 
 WORKDIR /
-ADD . ./app
+ADD . ./wipn
 
 EXPOSE 3000
 
-WORKDIR /app
+WORKDIR /wipn
 CMD ["node", "server.js"]
