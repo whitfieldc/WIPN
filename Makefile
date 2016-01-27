@@ -7,7 +7,8 @@ build:
 shell:
 	@docker run --rm -it \
               -v $(PWD):/wipn \
-              --link rethink_wipn:db \
+              -p 3000:3000 \
+              --net wiprnet \
               $(IMAGE_NAME) bash
 .PHONY: shell
 
@@ -21,7 +22,7 @@ app:
 	@docker run -d -it \
               -v $(PWD):/wipn \
               -p 3000:3000 \
-              --link rethink_wipn:db \
+              --net wiprnet \
               --name wipn_app \
               $(IMAGE_NAME)
 .PHONY: app
@@ -29,6 +30,7 @@ app:
 db:
 	@docker run -d \
               -p 8080:8080 \
+              --net wiprnet \
               --name rethink_wipn \
               rethinkdb:2.2
 .PHONY: db

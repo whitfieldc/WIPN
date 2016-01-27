@@ -64,8 +64,8 @@ var recordSeat = function(seatNote){
     .then(function(response){
         seatObj = {
             note: seatNote,
-            lat: response.G,
-            lon: response.K
+            lat: response.lat(),
+            lon: response.lng()
         };
         socket.emit('seat', seatObj);
     });
